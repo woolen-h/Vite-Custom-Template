@@ -1,7 +1,8 @@
 import React from "react";
+import Main from "@/Main.js";
 
 function App() {
-  return <h1>Hello, React!</h1>;
+  return <Main />;
 }
 
 export default App;
