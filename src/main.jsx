@@ -4,7 +4,7 @@ import InputGroup from "@/InputGroup.jsx";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 
-const container = document.getElementById("react-app");
+const container = document.getElementById("root");
 
 if (container) {
   createRoot(container).render(
