@@ -3,7 +3,7 @@ import ButtonGroup from "@/ButtonGroup.jsx";
 import InputGroup from "@/InputGroup.jsx";
 import { StrictMode } from "react";
 
-export const Main = () => {
+function Main() {
   return (
     <StrictMode>
       <div className="Main">
@@ -12,4 +12,6 @@ export const Main = () => {
       </div>
     </StrictMode>
   );
-};
+}
+
+export default Main;
