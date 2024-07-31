@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonGroup from "@/ButtonGroup.js";
-import InputGroup from "@/InputGroup.js";
+import ButtonGroup from "@/ButtonGroup.jsx";
+import InputGroup from "@/InputGroup.jsx";
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 
