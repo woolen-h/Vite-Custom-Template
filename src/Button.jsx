@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Button = ({ label, status, styles, disabled }) => {
   const getStatusClass = () => {
@@ -31,6 +32,13 @@ const Button = ({ label, status, styles, disabled }) => {
       {label}
     </button>
   );
+};
+
+Button.propTypes = {
+  label: PropTypes.string.isRequired,
+  status: PropTypes.oneOf(["default", "disabled"]),
+  styles: PropTypes.oneOf(["solid", "outline"]),
+  disabled: PropTypes.bool,
 };
 
 export default Button;

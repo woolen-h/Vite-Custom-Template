@@ -1,6 +1,11 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 
-export function Input({ status, placeholder, size }) {
+export function Input({
+  status = "default",
+  placeholder = "",
+  size = "small",
+}) {
   const getStatusClass = () => {
     switch (status) {
       case "default":
@@ -38,9 +43,15 @@ export function Input({ status, placeholder, size }) {
   );
 }
 
+Input.propTypes = {
+  status: PropTypes.oneOf(["default", "success", "error", "warning", "search"]),
+  placeholder: PropTypes.string,
+  size: PropTypes.oneOf(["small", "large"]),
+};
+
 export default Input;
 
-export function InputLabel({ type, placeholder, labelClass }) {
+export function InputLabel({ type, placeholder = "", labelClass = "" }) {
   return (
     <label className={`label label-${labelClass}`}>
       <input
@@ -51,3 +62,9 @@ export function InputLabel({ type, placeholder, labelClass }) {
     </label>
   );
 }
+
+InputLabel.propTypes = {
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
+  labelClass: PropTypes.string,
+};
